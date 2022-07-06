@@ -5,8 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="scripts.js" defer></script>
+    <script src="https://kit.fontawesome.com/88f514fa56.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <script src="scripts.js"></script>
+    <div class="container">
+        <div class="title">
+            <h1>Rock Paper Scissors Game</h1>
+        </div>
+        <div class="content">
+            <div class="player-container">
+                <div class="header-player">
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Player</h2>
+                </div>
+                <div class="player-score">
+                    <h3>Score:</h3>
+                    <h3 id="scorePlayer">0</h3>
+                </div>
+                <div class="picked-content">
+                    <span class="playerPicked">pick</span>
+                    <div class="icon">
+                        <i class="fa-regular fa-circle-question" id="playerPicked"></i>
+                    </div>
+                </div>
+                <div class="icon-content">
+                    <button class="btn-icon" id="rock-btn" onclick="rock()" type="button" disabled>
+                        <i class="fa-regular fa-hand-back-fist" id="rock"></i>
+                    </button>
+                    <button class="btn-icon" id="paper-btn" onclick="paper()" type="button" disabled>
+                        <i class="fa-regular fa-hand"></i>
+                    </button>
+                    <button class="btn-icon" id="scissors-btn" onclick="scissors()" type="button" disabled>
+                        <i class="fa-regular fa-hand-scissors"></i>
+                    </button>
+                </div>
+                <div id="player-message"></div>
+            </div>
+            <div class="play">
+                <div>
+                    <button class="btn" id="play" type="button" onclick="play()">PLAY</button>
+                </div>
+                <div>
+                    <button class="btn" id="fight" type="button" onclick="fight()" disabled>FIGHT</button>
+                </div>
+                <div>
+                    <button class="btn" id="nextRound" type="button" onclick="nextRound()" disabled>NEXT ROUND</button>
+                </div>
+                <div>
+                    <button class="btn" id="reset" type="button" onclick="reset()" disabled>RESET/PLAY AGAIN</button>
+                </div>
+                <div id="game-message"></div>
+            </div>
+            <div class="computer-container">
+                <div class="header-computer">
+                    <i class="fa-solid fa-computer"></i>
+                    <h2>Computer</h2>
+                </div>
+                <div class="computer-score">
+                    <h3>Score:</h3>
+                    <h3 id="scoreComputer">0</h3>
+                </div>
+                <div class="picked-content">
+                    <span class="computerPicked">pick</span>
+                    <div class="icon">
+                        <i class="fa-regular fa-circle-question" id="computerPicked"></i>
+                    </div>
+                </div>
+                <div id="computer-message"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

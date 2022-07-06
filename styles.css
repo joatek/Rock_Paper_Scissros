@@ -1,0 +1,174 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+body {
+    background-color:  #E1E8EB;
+    color: #343A40;
+}
+
+.fa-solid {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #FFC107
+}
+
+.fa-regular {
+    font-size: 4em;
+    padding: 10px;
+}
+
+.icon {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(225, 232, 235, 0.077)
+}
+
+.btn-icon {
+    cursor: not-allowed;
+    width: 80px;
+    background-color: #E1E8EB;
+    border: 2px solid #7952B3;
+    border-radius: 10px;
+    color: #343A40;
+}
+
+.btn {
+    background-color: #7952B3;
+    font-family: 'Titan One', cursive;
+    color: #343A40;
+    border: 0;
+    width: 200px;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.70), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-icon:hover {
+    background-color: #7952B3;
+}
+
+.title {
+    margin-bottom: 50px;
+}
+
+
+.container {
+    flex-direction: column;
+    font-family: 'Titan One', cursive;
+
+    letter-spacing: 0.15em;
+
+}
+
+.content {
+    flex-direction: row;
+    width: 80vw;
+    height: 60vh;
+}
+
+.player-container {
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    justify-content: flex-start;
+
+}
+
+.header-player {
+    height: 8vh;
+    margin-bottom: 5px;
+}
+
+.player-score {
+    height: 8vh;
+    color: #343A40
+}
+
+.picked-content {
+    flex-direction: column;
+    height: 20vh;
+    width: 10vw;
+}
+
+.play {
+    flex-direction: column;
+ 
+}
+
+.computer-container {
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    justify-content: flex-start;
+}
+
+.header-computer {
+    height: 8vh;
+    margin-bottom: 5px;
+}
+
+.computer-score {
+    height: 8vh;
+}
+
+.icon-content {
+    width: 20vw;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.playerPicked {
+    /* display: none; */
+    width: 100px;
+}
+
+.computerPicked {
+    /* display: none; */
+    width: 100px;
+}
+
+#computer-message {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#score {
+    margin-left: 10px;
+}
+
+#game-message {
+    margin-top: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#player-message {
+    text-align: center;
+}
+
+#fight {
+    cursor: not-allowed;
+}
+
+#nextRound {
+    cursor: not-allowed;
+}
+
+#reset {
+    cursor: not-allowed;
+}
+
+
+
+
