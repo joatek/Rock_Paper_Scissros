@@ -28,19 +28,18 @@
                     <h3 id="scorePlayer">0</h3>
                 </div>
                 <div class="picked-content">
-                    <span class="playerPicked">pick</span>
                     <div class="icon">
                         <i class="fa-regular fa-circle-question" id="playerPicked"></i>
                     </div>
                 </div>
                 <div class="icon-content">
-                    <button class="btn-icon" id="rock-btn" onclick="rock()" type="button" disabled>
+                    <button class="btn-icon" id="rock-btn" onclick="clickRockButton()" type="button" disabled>
                         <i class="fa-regular fa-hand-back-fist" id="rock"></i>
                     </button>
-                    <button class="btn-icon" id="paper-btn" onclick="paper()" type="button" disabled>
+                    <button class="btn-icon" id="paper-btn" onclick="clickPaperButton()" type="button" disabled>
                         <i class="fa-regular fa-hand"></i>
                     </button>
-                    <button class="btn-icon" id="scissors-btn" onclick="scissors()" type="button" disabled>
+                    <button class="btn-icon" id="scissors-btn" onclick="clickScissorsButton()" type="button" disabled>
                         <i class="fa-regular fa-hand-scissors"></i>
                     </button>
                 </div>
@@ -48,16 +47,10 @@
             </div>
             <div class="play">
                 <div>
-                    <button class="btn" id="play" type="button" onclick="play()">PLAY</button>
+                    <button class="btn" id="play" type="button" onclick="clickPlayButton()">PLAY</button>
                 </div>
                 <div>
-                    <button class="btn" id="fight" type="button" onclick="fight()" disabled>FIGHT</button>
-                </div>
-                <div>
-                    <button class="btn" id="nextRound" type="button" onclick="nextRound()" disabled>NEXT ROUND</button>
-                </div>
-                <div>
-                    <button class="btn" id="reset" type="button" onclick="reset()" disabled>RESET/PLAY AGAIN</button>
+                    <button class="btn" id="reset" type="button" onclick="clickResetButton()" disabled>RESET/PLAY AGAIN</button>
                 </div>
                 <div id="game-message"></div>
             </div>
@@ -71,7 +64,6 @@
                     <h3 id="scoreComputer">0</h3>
                 </div>
                 <div class="picked-content">
-                    <span class="computerPicked">pick</span>
                     <div class="icon">
                         <i class="fa-regular fa-circle-question" id="computerPicked"></i>
                     </div>
