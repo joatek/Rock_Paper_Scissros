@@ -1,21 +1,21 @@
 // Text variables
-let playerMessage = document.getElementById('player-message');
-let gameMessage = document.getElementById('game-message');
-let computerMessage = document.getElementById('computer-message');
-let scorePlayer = document.getElementById('scorePlayer');
-let scoreComputer = document.getElementById('scoreComputer');
+const playerMessage = document.getElementById('player-message');
+const gameMessage = document.getElementById('game-message');
+const computerMessage = document.getElementById('computer-message');
+const scorePlayer = document.getElementById('scorePlayer');
+const scoreComputer = document.getElementById('scoreComputer');
 
 // Button variables
-let btnRock = document.getElementById('rock-btn');
-let btnPaper = document.getElementById('paper-btn');
-let btnScissors = document.getElementById('scissors-btn');
-let btnNextRound = document.getElementById('nextRound');
-let btnReset = document.getElementById('reset');
-let btnPlay = document.getElementById('play');
+const btnRock = document.getElementById('rock-btn');
+const btnPaper = document.getElementById('paper-btn');
+const btnScissors = document.getElementById('scissors-btn');
+const btnNextRound = document.getElementById('nextRound');
+const btnReset = document.getElementById('reset');
+const btnPlay = document.getElementById('play');
 
 // Icon variables
-let pickedIconComputer = document.querySelector('#computerPicked');
-let pickedIconPlayer = document.querySelector('#playerPicked');
+const pickedIconComputer = document.querySelector('#computerPicked');
+const pickedIconPlayer = document.querySelector('#playerPicked');
 
 // Score variables
 let playerScore = 0;
@@ -90,13 +90,9 @@ function clickPlayButton() {
 
 
 function clickRockButton() {
-    if (pickedIconPlayer.classList.contains('fa-circle-question')) {
-        pickedIconPlayer.classList.replace('fa-circle-question', 'fa-hand-back-fist');
-    } else if (pickedIconPlayer.classList.contains('fa-hand')) {
-        pickedIconPlayer.classList.replace('fa-hand', 'fa-hand-back-fist');
-    } else if (pickedIconPlayer.classList.contains('fa-hand-scissors')) {
-        pickedIconPlayer.classList.replace('fa-hand-scissors', 'fa-hand-back-fist');
-    }
+
+    pickedIconPlayer.className = 'fa-regular fa-hand-back-fist';
+    
     let messages = ['Nice choice.', 'Great choice.', 'Awesome choice.'];
     let index = Math.floor(Math.random() * 3);
     let message = messages[index];
@@ -107,13 +103,9 @@ function clickRockButton() {
 }
 
 function clickPaperButton() {
-    if (pickedIconPlayer.classList.contains('fa-circle-question')) {
-        pickedIconPlayer.classList.replace('fa-circle-question', 'fa-hand');
-    } else if (pickedIconPlayer.classList.contains('fa-hand-back-fist')) {
-        pickedIconPlayer.classList.replace('fa-hand-back-fist', 'fa-hand');
-    } else if (pickedIconPlayer.classList.contains('fa-hand-scissors')) {
-        pickedIconPlayer.classList.replace('fa-hand-scissors', 'fa-hand');
-    }
+
+    pickedIconPlayer.className = 'fa-regular fa-hand';
+    
     let messages = ['Nice choice.', 'Great choice.', 'Awesome choice.'];
     let index = Math.floor(Math.random() * 3);
     let message = messages[index];
@@ -124,17 +116,13 @@ function clickPaperButton() {
 }
 
 function clickScissorsButton() {
-    if (pickedIconPlayer.classList.contains('fa-circle-question')) {
-        pickedIconPlayer.classList.replace('fa-circle-question', 'fa-hand-scissors');
-    } else if (pickedIconPlayer.classList.contains('fa-hand-back-fist')) {
-        pickedIconPlayer.classList.replace('fa-hand-back-fist', 'fa-hand-scissors');
-    } else if (pickedIconPlayer.classList.contains('fa-hand')) {
-        pickedIconPlayer.classList.replace('fa-hand', 'fa-hand-scissors');
-    }
-    let messages = ['Nice choice.', 'Great choice.', 'Awesome choice.'];
+
+    pickedIconPlayer.className = 'fa-regular fa-hand-scissors';
+    
+    const messages = ['Nice choice.', 'Great choice.', 'Awesome choice.'];
     let index = Math.floor(Math.random() * 3);
-    let message = messages[index];
-    let playerMessage = document.getElementById('player-message');
+    const message = messages[index];
+    const playerMessage = document.getElementById('player-message');
     playerMessage.textContent = message;
 
     game('scissors');
@@ -148,33 +136,15 @@ function computerPick() {
 }
 
 function rockComputerIcon() {
-    if (pickedIconComputer.classList.contains('fa-circle-question')) {
-        pickedIconComputer.classList.replace('fa-circle-question', 'fa-hand-back-fist');
-    } else if (pickedIconComputer.classList.contains('fa-hand')) {
-        pickedIconComputer.classList.replace('fa-hand', 'fa-hand-back-fist');
-    } else if (pickedIconComputer.classList.contains('fa-hand-scissors')) {
-        pickedIconComputer.classList.replace('fa-hand-scissors', 'fa-hand-back-fist');
-    }
+    pickedIconComputer.className = 'fa-regular fa-hand-back-fist'; 
 }
 
 function paperComputerIcon() {
-    if (pickedIconComputer.classList.contains('fa-circle-question')) {
-        pickedIconComputer.classList.replace('fa-circle-question', 'fa-hand');
-    } else if (pickedIconComputer.classList.contains('fa-hand-back-fist')) {
-        pickedIconComputer.classList.replace('fa-hand-back-fist', 'fa-hand');
-    } else if (pickedIconComputer.classList.contains('fa-hand-scissors')) {
-        pickedIconComputer.classList.replace('fa-hand-scissors', 'fa-hand');
-    }
+    pickedIconComputer.className = 'fa-regular fa-hand';
 }
 
 function scissorsComputerIcon() {
-    if (pickedIconComputer.classList.contains('fa-circle-question')) {
-        pickedIconComputer.classList.replace('fa-circle-question', 'fa-hand-scissors');
-    } else if (pickedIconComputer.classList.contains('fa-hand-back-fist')) {
-        pickedIconComputer.classList.replace('fa-hand-back-fist', 'fa-hand-scissors');
-    } else if (pickedIconComputer.classList.contains('fa-hand')) {
-        pickedIconComputer.classList.replace('fa-hand', 'fa-hand-scissors');
-    }
+    pickedIconComputer.className = 'fa-regular fa-hand-scissors';
 }
 
 function game(playerPicked) {
@@ -253,14 +223,9 @@ function clickResetButton() {
     gameMessage.textContent = 'Welcome to Rock, Paper, Scissors game.'
     computerMessage.textContent = 'Computer is picking its choice.'
 
-    if (pickedIconComputer.classList.contains('fa-hand-scissors')) {
-        pickedIconComputer.classList.replace('fa-hand-scissors', 'fa-circle-question');
-    } else if (pickedIconComputer.classList.contains('fa-hand-back-fist')) {
-        pickedIconComputer.classList.replace('fa-hand-back-fist', 'fa-circle-question');
-    } else if (pickedIconComputer.classList.contains('fa-hand')) {
-        pickedIconComputer.classList.replace('fa-hand', 'fa-circle-question');
-    }
-
+    pickedIconComputer.className = 'fa-regular fa-circle-question';
+    pickedIconPlayer.className = 'fa-regular fa-circle-question';
+    
     pickedIconComputer.classList.add('fa-flip');
 
     enablePaperButton();
